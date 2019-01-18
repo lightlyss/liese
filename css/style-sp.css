@@ -1,0 +1,665 @@
+.pause {
+  width: 100vw;
+  overflow: hidden;
+}
+body {
+  background: #666666;
+}
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 247.19791vw;
+}
+section#loading {
+  position: fixed;
+  z-index: 10;
+  height: 100vh;
+  overflow: hidden;
+  background: url(../img/sp/bg_loading.jpg) repeat;
+}
+section#main {
+  z-index: 10;
+  overflow: hidden;
+}
+section#gear {
+  overflow: hidden;
+}
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 247.19791vw;
+  overflow: hidden;
+  /* filter: invert(1); */
+}
+canvas {
+  z-index: 9999;
+}
+#cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 247.19791vw;
+  z-index: 10;
+}
+.event {
+  z-index: 90;
+}
+.content {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+}
+#border {
+  position: fixed;
+  bottom: 0vw;
+  left: 0vw;
+  width: 100%;
+  height: 8.464vw;
+  background: url(../img/sp/border.png) repeat;
+}
+#border2 {
+  position: absolute;
+  top: 0vw;
+  left: 0vw;
+  width: 100%;
+  height: 8.464vw;
+  background: url(../img/sp/border.png) repeat;
+}
+#count_texture {
+  position: absolute;
+  top: 10.02604167vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#count_texture img {
+  width: 100vw;
+  height: auto;
+}
+#kv_logo {
+  position: absolute;
+  top: 10.02604167vw;
+  left: 21.963542vw;
+}
+#kv_logo img {
+  width: 56.25vw;
+  height: 32.421875vw;
+}
+#btn_fb {
+  position: absolute;
+  top: 42.1875vw;
+  left: 45.05208333vw;
+}
+#btn_fb img {
+  width: 7.421875vw;
+  height: 7.421875vw;
+}
+#btn_tw {
+  position: absolute;
+  top: 42.31770833vw;
+  left: 36.71875vw;
+}
+#btn_tw img {
+  width: 7.421875vw;
+  height: 7.421875vw;
+}
+#btn_line {
+  position: absolute;
+  top: 42.31770833vw;
+  left: 53.38541667vw;
+}
+#btn_line img {
+  width: 7.421875vw;
+  height: 7.421875vw;
+}
+#copy1 {
+  position: absolute;
+  top: 161.927083vw;
+  left: 25.78125vw;
+}
+#copy1 img {
+  width: 45.96354167vw;
+  height: 3.515625vw;
+}
+#btn_tweet {
+  position: absolute;
+  top: 170.786458vw;
+  left: 23.69791667vw;
+}
+#btn_tweet img {
+  width: 49.34895833vw;
+  height: 8.46354167vw;
+}
+#copy2 {
+  position: absolute;
+  top: 188.067708vw;
+  left: 13.786458vw;
+}
+#copy2 img {
+  width: 70.994792vw;
+}
+#btn_google {
+  position: absolute;
+  top: 220.286458vw;
+  left: 22.770833vw;
+}
+#btn_google img {
+  width: 18.22916667vw;
+  height: 5.59895833vw;
+}
+#btn_ios {
+  position: absolute;
+  top: 220.286458vw;
+  left: 42.942708vw;
+}
+#btn_ios img {
+  width: 14.453125vw;
+  height: 5.46875vw;
+}
+#btn_dmm {
+  position: absolute;
+  top: 220.286458vw;
+  left: 58.942708vw;
+}
+#btn_dmm img {
+  width: 17.83vw;
+}
+#footer_logo {
+  position: absolute;
+  top: 203.733333vw;
+  left: 34.26666667vw;
+}
+#footer_logo img {
+  width: 29.6875vw;
+  height: 16.92708333vw;
+}
+#footer_txt1 {
+  position: absolute;
+  top: 230.442708vw;
+  left: 12.109375vw;
+}
+#footer_txt1 img {
+  width: 73.30729167vw;
+  height: 1.30208333vw;
+}
+#footer_txt2 {
+  position: absolute;
+  top: 235.307292vw;
+  left: 24.86979167vw;
+}
+#footer_txt2 img {
+  width: 48.17708333vw;
+  height: 1.82291667vw;
+}
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  opacity: 1;
+  transform: translateX(-50%);
+}
+.bg_black {
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -101;
+}
+#bgImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -99;
+  opacity: 0.8;
+}
+.moji {
+  position: absolute;
+  top: 16vw;
+  left: 22.26666667vw;
+}
+.moji img {
+  width: 2.47395833vw;
+  height: 13.93229167vw;
+}
+.circle_l {
+  position: absolute;
+  top: 6.8vw;
+  left: 7.2vw;
+}
+.circle_l > img {
+  width: 32.29166667vw;
+  height: 32.29166667vw;
+}
+.circle_m1 {
+  position: absolute;
+  top: 0vw;
+  left: 19.86666667vw;
+}
+.circle_m1 img {
+  width: 7.03125vw;
+  height: 7.421875vw;
+}
+.circle_m2 {
+  position: absolute;
+  top: 19.6vw;
+  left: 39.6vw;
+}
+.circle_m2 img {
+  width: 7.03125vw;
+  height: 7.421875vw;
+}
+.circle_m3 {
+  position: absolute;
+  top: 39.2vw;
+  left: 19.6vw;
+}
+.circle_m3 img {
+  width: 7.03125vw;
+  height: 7.421875vw;
+}
+.circle_m4 {
+  position: absolute;
+  top: 19.46666667vw;
+  left: 0vw;
+}
+.circle_m4 img {
+  width: 7.03125vw;
+  height: 7.421875vw;
+}
+.circle_s1 {
+  position: absolute;
+  top: 4.13333333vw;
+  left: 31.46666667vw;
+}
+.circle_s1 img {
+  width: 3.64583333vw;
+  height: 3.77604167vw;
+}
+.circle_s2 {
+  position: absolute;
+  top: 10.466667vw;
+  left: 37.666667vw;
+}
+.circle_s2 img {
+  width: 3.64583333vw;
+  height: 3.77604167vw;
+}
+.circle_s3 {
+  position: absolute;
+  top: 30.66666667vw;
+  left: 39.06666667vw;
+}
+.circle_s3 img {
+  width: 3.64583333vw;
+  height: 3.77604167vw;
+}
+.circle_s4 {
+  position: absolute;
+  top: 37.533333vw;
+  left: 32.266667vw;
+}
+.circle_s4 img {
+  width: 3.64583333vw;
+  height: 3.77604167vw;
+}
+.circle_s5 {
+  position: absolute;
+  top: 37.833333vw;
+  left: 10.66666667vw;
+}
+.circle_s5 img {
+  width: 3.64583333vw;
+  height: 3.77604167vw;
+}
+.circle_s6 {
+  position: absolute;
+  top: 30.66666667vw;
+  left: 4.4vw;
+}
+.circle_s6 img {
+  width: 3.64583333vw;
+  height: 3.77604167vw;
+}
+.circle_s7 {
+  position: absolute;
+  top: 11.46666667vw;
+  left: 4.4vw;
+}
+.circle_s7 img {
+  width: 3.64583333vw;
+  height: 3.77604167vw;
+}
+.circle_s8 {
+  position: absolute;
+  top: 4.93333333vw;
+  left: 10.4vw;
+}
+.circle_s8 img {
+  width: 3.64583333vw;
+  height: 3.77604167vw;
+}
+#h {
+  position: absolute;
+  top: 55.781vw;
+  left: 3vw;
+  width: 45.703vw;
+  height: 45.703vw;
+  transform: scale(1.2);
+}
+#m {
+  position: absolute;
+  top: 55.781vw;
+  right: 3.7vw;
+  width: 45.703vw;
+  height: 45.703vw;
+  transform: scale(1.2);
+}
+#s {
+  position: absolute;
+  top: 105vw;
+  left: 26vw;
+  width: 45.703vw;
+  height: 45.703vw;
+  transform: scale(1.2);
+}
+.num {
+  position: absolute;
+  top: 18.875vw;
+  left: 10.402vw;
+  width: 26.042vw;
+  text-align: center;
+}
+.num1 {
+  position: absolute;
+  top: 2.214vw;
+  left: 9.97vw;
+  width: 13.021vw;
+  text-align: center;
+}
+.num2 {
+  position: absolute;
+  top: 25.639vw;
+  left: 9.57vw;
+  width: 13.021vw;
+  text-align: center;
+  transform: rotate(180deg);
+}
+#gear .content {
+  margin-left: -13.021vw;
+  margin-top: -26.042vw;
+}
+#gear1a {
+  position: absolute;
+  top: 222.8vw;
+  left: 75.33333333vw;
+}
+#gear1a img {
+  width: 17.31770833vw;
+  height: 17.44791667vw;
+}
+#gear1b {
+  position: absolute;
+  top: 228.4vw;
+  left: 18.66666667vw;
+}
+#gear1b img {
+  width: 21.74479167vw;
+  height: 21.22395833vw;
+}
+#gear1c {
+  position: absolute;
+  top: 211.6vw;
+  left: 5.6vw;
+}
+#gear1c img {
+  width: 21.74479167vw;
+  height: 21.74479167vw;
+}
+#gear1d {
+  position: absolute;
+  top: 204.26666667vw;
+  left: 88.8vw;
+}
+#gear1d img {
+  width: 29.42708333vw;
+  height: 29.55729167vw;
+}
+#gear1e {
+  position: absolute;
+  top: 137.06666667vw;
+  left: 0vw;
+}
+#gear1e img {
+  width: 22.78645833vw;
+  height: 23.046875vw;
+}
+#gear1f {
+  position: absolute;
+  top: 117.73333333vw;
+  left: 100.93333333vw;
+}
+#gear1f img {
+  width: 23.046875vw;
+  height: 23.046875vw;
+}
+#gear1g {
+  position: absolute;
+  top: 185.06666667vw;
+  left: 102.4vw;
+}
+#gear1g img {
+  width: 23.046875vw;
+  height: 23.046875vw;
+}
+#gear1h {
+  position: absolute;
+  top: 10.93333333vw;
+  left: 84.93333333vw;
+}
+#gear1h img {
+  width: 39.97395833vw;
+  height: 39.71354167vw;
+}
+#gear1i {
+  position: absolute;
+  top: 5.33333333vw;
+  left: 0vw;
+}
+#gear1i img {
+  width: 34.375vw;
+  height: 34.50520833vw;
+}
+#gear1j {
+  position: absolute;
+  top: 14.93333333vw;
+  left: 52.4vw;
+}
+#gear1j img {
+  width: 14.84375vw;
+  height: 14.97395833vw;
+}
+#gear1k {
+  position: absolute;
+  top: 12.4vw;
+  left: 33.06666667vw;
+}
+#gear1k img {
+  width: 20.57291667vw;
+  height: 20.57291667vw;
+}
+#gear1l {
+  position: absolute;
+  top: 37.33333333vw;
+  left: 10vw;
+}
+#gear1l img {
+  width: 20.57291667vw;
+  height: 20.57291667vw;
+}
+#gear2a {
+  position: absolute;
+  top: 138.93333333vw;
+  left: 96.93333333vw;
+}
+#gear2a img {
+  width: 19.79166667vw;
+  height: 19.40104167vw;
+}
+#gear2b {
+  position: absolute;
+  top: 156.4vw;
+  left: 10.4vw;
+}
+#gear2b img {
+  width: 21.35416667vw;
+  height: 20.96354167vw;
+}
+#gear2c {
+  position: absolute;
+  top: 231.86666667vw;
+  left: 87.73333333vw;
+}
+#gear2c img {
+  width: 17.96875vw;
+  height: 17.578125vw;
+}
+#gear2d {
+  position: absolute;
+  top: 216.26666667vw;
+  left: 10vw;
+}
+#gear2d img {
+  width: 12.890625vw;
+  height: 12.5vw;
+}
+#gear2e {
+  position: absolute;
+  top: 217.06666667vw;
+  left: 26.93333333vw;
+}
+#gear2e img {
+  width: 13.02083333vw;
+  height: 12.890625vw;
+}
+#gear2f {
+  position: absolute;
+  top: 237.06666667vw;
+  left: 38.93333333vw;
+}
+#gear2f img {
+  width: 11.97916667vw;
+  height: 11.58854167vw;
+}
+#gear2g {
+  position: absolute;
+  top: 230.66666667vw;
+  left: 104.13333333vw;
+}
+#gear2g img {
+  width: 17.96875vw;
+  height: 17.578125vw;
+}
+#gear2h {
+  position: absolute;
+  top: 22.66666667vw;
+  left: 70.53333333vw;
+}
+#gear2h img {
+  width: 17.44791667vw;
+  height: 17.1875vw;
+}
+#gear2i {
+  position: absolute;
+  top: 29.2vw;
+  left: 26.93333333vw;
+}
+#gear2i img {
+  width: 17.44791667vw;
+  height: 17.1875vw;
+}
+#gear2k,
+#gear2j {
+  display: none;
+}
+#gear1loading1 {
+  position: absolute;
+  top: -18.229vw;
+  left: 4.688vw;
+}
+#gear1loading2 {
+  position: absolute;
+  top: -20.052vw;
+  left: -4.167vw;
+}
+#gear1loading3 {
+  position: absolute;
+  top: 0;
+  left: -22.005vw;
+}
+#gear2loading4 {
+  position: absolute;
+  top: -9.896vw;
+  left: -10.026vw;
+}
+#loading_txt1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+#loading .gearwrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+/** pagetop **/
+#page-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 80%;
+  z-index: 99;
+}
+#page-top a {
+  display: block;
+  color: #fff;
+  width: 100px;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+}
+#page-top a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+#page-top {
+  right: 3vw;
+  bottom: 8vw;
+}
+#page-top a img {
+  width: 10vw;
+}

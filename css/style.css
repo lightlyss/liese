@@ -1,0 +1,540 @@
+body {
+  background: #666666;
+}
+
+section.pause:before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+  width: 1px;
+  height: 1px;
+  outline: 2999px solid invert;
+}
+
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1431px;
+}
+
+section#loading {
+  position: fixed;
+  z-index: 10;
+  min-width: 1280px;
+  height: 100vh;
+  overflow: hidden;
+  background: url(../img/pc/bg_loading.jpg) repeat;
+}
+
+section#main {
+  z-index: 10;
+  min-width: 1280px;
+  overflow: hidden;
+}
+
+section#gear {
+  overflow: hidden;
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1411px;
+  min-width: 1280px;
+  overflow: hidden;
+  /* filter: invert(1); */
+}
+
+canvas {
+  z-index: 9999;
+}
+
+#cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1411px;
+  z-index: 10;
+}
+
+.event {
+  z-index: 90;
+}
+
+.content {
+  width: 1280px;
+  margin: -200px auto 0;
+  position: relative;
+  top: 0;
+}
+
+#count_texture {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#kv_logo {
+  position: absolute;
+  top: 281px;
+  left: 421px;
+}
+
+#btn_fb {
+  position: absolute;
+  top: 284px;
+  left: 1067px;
+}
+
+#btn_tw {
+  position: absolute;
+  top: 285px;
+  left: 1003px;
+}
+
+#btn_line {
+  position: absolute;
+  top: 285px;
+  left: 1131px;
+}
+
+#copy1 {
+  position: absolute;
+  top: 1038px;
+  left: 473px;
+}
+
+#btn_tweet {
+  position: absolute;
+  top: 1085px;
+  left: 460px;
+}
+
+a:hover {
+  filter: invert(1);
+}
+
+#kv_logo > a:hover,#footer_logo > a:hover{
+  filter: initial;
+  opacity: .7;
+}
+
+#copy2 {
+  position: absolute;
+  top: 1216px;
+  left: 379px;
+}
+
+#footer_logo {
+  position: absolute;
+  top: 1324px;
+  left: 537px;
+}
+
+#border {
+  position: fixed;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  height: 76px;
+  background: url(../img/pc/border.png) repeat;
+}
+
+#border2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 76px;
+  background: url(../img/pc/border.png) repeat;
+}
+
+#btn_google {
+  position: absolute;
+  top: 1459px;
+  left: 446px;
+}
+
+#btn_ios {
+  position: absolute;
+  top: 1459px;
+  left: 594px;
+}
+
+#btn_dmm {
+  position: absolute;
+  top: 1459px;
+  left: 713px;
+}
+
+#footer_txt1 {
+  position: absolute;
+  top: 1537px;
+  left: 373px;
+}
+
+#footer_txt2 {
+  position: absolute;
+  top: 1559px;
+  left: 471px;
+}
+
+#gear1b {
+  position: absolute;
+  top: 22px;
+  left: 426px;
+}
+
+#gear1f {
+  position: absolute;
+  top: 51px;
+  left: 153px;
+}
+
+#gear2c {
+  position: absolute;
+  top: 58px;
+  left: 1234px;
+}
+
+#gear1h {
+  position: absolute;
+  top: 114px;
+  left: -394px;
+}
+
+#gear1k {
+  position: absolute;
+  top: 125px;
+  left: -100px;
+}
+
+#gear2e {
+  position: absolute;
+  top: 224px;
+  left: 1321px;
+}
+
+#gear2d {
+  position: absolute;
+  top: 239px;
+  left: 1213px;
+}
+
+#gear2k {
+  position: absolute;
+  top: 288px;
+  left: -124px;
+}
+
+#gear2f {
+  position: absolute;
+  top: 342px;
+  left: 1197px;
+}
+
+#gear1l {
+  position: absolute;
+  top: 385px;
+  left: -327px;
+}
+
+#gear2b {
+  position: absolute;
+  top: 424px;
+  left: -166px;
+}
+
+#gear1i {
+  position: absolute;
+  top: 521px;
+  left: -405px;
+}
+
+#gear1j {
+  position: absolute;
+  top: 563px;
+  left: -283px;
+}
+
+#gear1e {
+  position: absolute;
+  top: 766px;
+  left: 1408px;
+}
+
+#gear1c {
+  position: absolute;
+  top: 1001px;
+  left: 1300px;
+}
+
+#gear1g {
+  position: absolute;
+  top: 1041px;
+  left: -337px;
+}
+
+#gear2a {
+  position: absolute;
+  top: 1114px;
+  left: -270px;
+}
+
+#gear2i {
+  position: absolute;
+  top: 1124px;
+  left: -10px;
+}
+
+#gear1d {
+  position: absolute;
+  top: 1207px;
+  left: 1149px;
+}
+
+#gear2g {
+  position: absolute;
+  top: 1294px;
+  left: 1472px;
+}
+
+#gear1a {
+  position: absolute;
+  top: 1300px;
+  left: -137px;
+}
+
+#gear2h {
+  position: absolute;
+  top: 1307px;
+  left: 1289px;
+}
+
+#gear2j {
+  position: absolute;
+  top: 1432px;
+  left: 173px;
+}
+
+#h {
+  position: absolute;
+  top: 560px;
+  left: 0px;
+  width: 420px;
+  height: 420px;
+}
+
+#m {
+  position: absolute;
+  top: 560px;
+  left: 50%;
+  margin-left: -210px;
+  width: 420px;
+  height: 420px;
+}
+
+#s {
+  position: absolute;
+  top: 560px;
+  right: 0px;
+  width: 420px;
+  height: 420px;
+}
+
+.circle_m1 {
+  position: absolute;
+  top: 0px;
+  left: 175px;
+}
+
+.circle_m2 {
+  position: absolute;
+  top: 173px;
+  left: 349px;
+}
+
+.circle_m3 {
+  position: absolute;
+  top: 346px;
+  left: 173px;
+}
+
+.circle_m4 {
+  position: absolute;
+  top: 172px;
+  left: 0px;
+}
+
+.circle_s1 {
+  position: absolute;
+  top: 37px;
+  left: 277px;
+}
+
+.circle_s2 {
+  position: absolute;
+  top: 102px;
+  left: 341px;
+}
+
+.circle_s3 {
+  position: absolute;
+  top: 271px;
+  left: 345px;
+}
+
+.circle_s4 {
+  position: absolute;
+  top: 341px;
+  left: 277px;
+}
+
+.circle_s5 {
+  position: absolute;
+  top: 341px;
+  left: 94px;
+}
+
+.circle_s6 {
+  position: absolute;
+  top: 277px;
+  left: 35px;
+}
+
+.circle_s7 {
+  position: absolute;
+  top: 102px;
+  left: 39px;
+}
+
+.circle_s8 {
+  position: absolute;
+  top: 44px;
+  left: 91px;
+}
+
+.circle_l {
+  position: absolute;
+  top: 61px;
+  left: 63px;
+}
+
+.moji {
+  position: absolute;
+  top: 143px;
+  left: 197px;
+}
+
+.num {
+  position: absolute;
+  top: 168px;
+  left: 106px;
+  width: 200px;
+  text-align: center;
+}
+
+.num1 {
+  position: absolute;
+  top: 17px;
+  left: 95px;
+  width: 100px;
+  text-align: center;
+}
+
+.num2 {
+  position: absolute;
+  top: 233px;
+  left: 95px;
+  width: 100px;
+  text-align: center;
+  transform: rotate(180deg);
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  opacity: 1;
+  transform: translateX(-50%);
+}
+
+.bg_black {
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -101;
+}
+
+#bgImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -99;
+  opacity: 0.8;
+}
+
+#gear1loading1 {
+  position: absolute;
+  top: -140px;
+  left: 36px;
+}
+
+#gear1loading2 {
+  position: absolute;
+  top: -154px;
+  left: -32px;
+}
+
+#gear1loading3 {
+  position: absolute;
+  top: 0;
+  left: -169px;
+}
+
+#gear2loading4 {
+  position: absolute;
+  top: -76px;
+  left: -77px;
+}
+
+#loading_txt1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#loading .gearwrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}

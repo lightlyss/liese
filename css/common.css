@@ -1,0 +1,1002 @@
+#sight {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+}
+#sight.anim {
+  display: block;
+  opacity: 0;
+  z-index: 9999;
+  animation: sightAnim 5s ease infinite, fadeIn 0.5s ease both 1;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes sightAnim {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -55%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+.pause {
+  filter: invert(1);
+}
+.pause .circle_l {
+  animation: none !important;
+}
+.spin {
+  animation: spin 0.4s linear infinite;
+}
+.spin2 {
+  animation: spin 0.3s linear infinite reverse;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinHalf {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 146px 145px;
+  }
+  90% {
+    transform: rotate(190deg);
+    transform-origin: 146px 145px;
+  }
+  100% {
+    transform: rotate(180deg);
+    transform-origin: 146px 145px;
+  }
+}
+@media screen and (max-width: 768px) {
+  @keyframes spinHalf {
+    0% {
+      transform: rotate(0deg);
+      transform-origin: 50% 49%;
+    }
+    90% {
+      transform: rotate(190deg);
+      transform-origin: 50% 49%;
+    }
+    100% {
+      transform: rotate(180deg);
+      transform-origin: 50% 49%;
+    }
+  }
+}
+.clock.f0 .circle_m1 {
+  opacity: 1;
+}
+.clock.f0 .circle_m2 {
+  opacity: 0;
+}
+.clock.f0 .circle_m3 {
+  opacity: 0;
+}
+.clock.f0 .circle_m4 {
+  opacity: 0;
+}
+.clock.f0 .circle_s1 {
+  opacity: 0;
+}
+.clock.f0 .circle_s2 {
+  opacity: 0;
+}
+.clock.f0 .circle_s3 {
+  opacity: 0;
+}
+.clock.f0 .circle_s4 {
+  opacity: 0;
+}
+.clock.f0 .circle_s5 {
+  opacity: 0;
+}
+.clock.f0 .circle_s6 {
+  opacity: 0;
+}
+.clock.f0 .circle_s7 {
+  opacity: 0;
+}
+.clock.f0 .circle_s8 {
+  opacity: 0;
+}
+.clock.f1 .circle_m1 {
+  opacity: 1;
+}
+.clock.f1 .circle_m2 {
+  opacity: 0;
+}
+.clock.f1 .circle_m3 {
+  opacity: 0;
+}
+.clock.f1 .circle_m4 {
+  opacity: 0;
+}
+.clock.f1 .circle_s1 {
+  opacity: 0;
+}
+.clock.f1 .circle_s2 {
+  opacity: 0;
+}
+.clock.f1 .circle_s3 {
+  opacity: 0;
+}
+.clock.f1 .circle_s4 {
+  opacity: 0;
+}
+.clock.f1 .circle_s5 {
+  opacity: 0;
+}
+.clock.f1 .circle_s6 {
+  opacity: 0;
+}
+.clock.f1 .circle_s7 {
+  opacity: 0;
+}
+.clock.f1 .circle_s8 {
+  opacity: 0;
+}
+.clock.f2 .circle_m1 {
+  opacity: 1;
+}
+.clock.f2 .circle_m2 {
+  opacity: 0;
+}
+.clock.f2 .circle_m3 {
+  opacity: 0;
+}
+.clock.f2 .circle_m4 {
+  opacity: 0;
+}
+.clock.f2 .circle_s1 {
+  opacity: 1;
+}
+.clock.f2 .circle_s2 {
+  opacity: 0;
+}
+.clock.f2 .circle_s3 {
+  opacity: 0;
+}
+.clock.f2 .circle_s4 {
+  opacity: 0;
+}
+.clock.f2 .circle_s5 {
+  opacity: 0;
+}
+.clock.f2 .circle_s6 {
+  opacity: 0;
+}
+.clock.f2 .circle_s7 {
+  opacity: 0;
+}
+.clock.f2 .circle_s8 {
+  opacity: 0;
+}
+.clock.f3 .circle_m1 {
+  opacity: 1;
+}
+.clock.f3 .circle_m2 {
+  opacity: 0;
+}
+.clock.f3 .circle_m3 {
+  opacity: 0;
+}
+.clock.f3 .circle_m4 {
+  opacity: 0;
+}
+.clock.f3 .circle_s1 {
+  opacity: 1;
+}
+.clock.f3 .circle_s2 {
+  opacity: 0;
+}
+.clock.f3 .circle_s3 {
+  opacity: 0;
+}
+.clock.f3 .circle_s4 {
+  opacity: 0;
+}
+.clock.f3 .circle_s5 {
+  opacity: 0;
+}
+.clock.f3 .circle_s6 {
+  opacity: 0;
+}
+.clock.f3 .circle_s7 {
+  opacity: 0;
+}
+.clock.f3 .circle_s8 {
+  opacity: 0;
+}
+.clock.f4 .circle_m1 {
+  opacity: 1;
+}
+.clock.f4 .circle_m2 {
+  opacity: 0;
+}
+.clock.f4 .circle_m3 {
+  opacity: 0;
+}
+.clock.f4 .circle_m4 {
+  opacity: 0;
+}
+.clock.f4 .circle_s1 {
+  opacity: 1;
+}
+.clock.f4 .circle_s2 {
+  opacity: 1;
+}
+.clock.f4 .circle_s3 {
+  opacity: 0;
+}
+.clock.f4 .circle_s4 {
+  opacity: 0;
+}
+.clock.f4 .circle_s5 {
+  opacity: 0;
+}
+.clock.f4 .circle_s6 {
+  opacity: 0;
+}
+.clock.f4 .circle_s7 {
+  opacity: 0;
+}
+.clock.f4 .circle_s8 {
+  opacity: 0;
+}
+.clock.f5 .circle_m1 {
+  opacity: 1;
+}
+.clock.f5 .circle_m2 {
+  opacity: 0;
+}
+.clock.f5 .circle_m3 {
+  opacity: 0;
+}
+.clock.f5 .circle_m4 {
+  opacity: 0;
+}
+.clock.f5 .circle_s1 {
+  opacity: 1;
+}
+.clock.f5 .circle_s2 {
+  opacity: 1;
+}
+.clock.f5 .circle_s3 {
+  opacity: 0;
+}
+.clock.f5 .circle_s4 {
+  opacity: 0;
+}
+.clock.f5 .circle_s5 {
+  opacity: 0;
+}
+.clock.f5 .circle_s6 {
+  opacity: 0;
+}
+.clock.f5 .circle_s7 {
+  opacity: 0;
+}
+.clock.f5 .circle_s8 {
+  opacity: 0;
+}
+.clock.f6 .circle_m1 {
+  opacity: 1;
+}
+.clock.f6 .circle_m2 {
+  opacity: 1;
+}
+.clock.f6 .circle_m3 {
+  opacity: 0;
+}
+.clock.f6 .circle_m4 {
+  opacity: 0;
+}
+.clock.f6 .circle_s1 {
+  opacity: 1;
+}
+.clock.f6 .circle_s2 {
+  opacity: 1;
+}
+.clock.f6 .circle_s3 {
+  opacity: 0;
+}
+.clock.f6 .circle_s4 {
+  opacity: 0;
+}
+.clock.f6 .circle_s5 {
+  opacity: 0;
+}
+.clock.f6 .circle_s6 {
+  opacity: 0;
+}
+.clock.f6 .circle_s7 {
+  opacity: 0;
+}
+.clock.f6 .circle_s8 {
+  opacity: 0;
+}
+.clock.f7 .circle_m1 {
+  opacity: 1;
+}
+.clock.f7 .circle_m2 {
+  opacity: 1;
+}
+.clock.f7 .circle_m3 {
+  opacity: 0;
+}
+.clock.f7 .circle_m4 {
+  opacity: 0;
+}
+.clock.f7 .circle_s1 {
+  opacity: 1;
+}
+.clock.f7 .circle_s2 {
+  opacity: 1;
+}
+.clock.f7 .circle_s3 {
+  opacity: 0;
+}
+.clock.f7 .circle_s4 {
+  opacity: 0;
+}
+.clock.f7 .circle_s5 {
+  opacity: 0;
+}
+.clock.f7 .circle_s6 {
+  opacity: 0;
+}
+.clock.f7 .circle_s7 {
+  opacity: 0;
+}
+.clock.f7 .circle_s8 {
+  opacity: 0;
+}
+.clock.f8 .circle_m1 {
+  opacity: 1;
+}
+.clock.f8 .circle_m2 {
+  opacity: 1;
+}
+.clock.f8 .circle_m3 {
+  opacity: 0;
+}
+.clock.f8 .circle_m4 {
+  opacity: 0;
+}
+.clock.f8 .circle_s1 {
+  opacity: 1;
+}
+.clock.f8 .circle_s2 {
+  opacity: 1;
+}
+.clock.f8 .circle_s3 {
+  opacity: 1;
+}
+.clock.f8 .circle_s4 {
+  opacity: 0;
+}
+.clock.f8 .circle_s5 {
+  opacity: 0;
+}
+.clock.f8 .circle_s6 {
+  opacity: 0;
+}
+.clock.f8 .circle_s7 {
+  opacity: 0;
+}
+.clock.f8 .circle_s8 {
+  opacity: 0;
+}
+.clock.f9 .circle_m1 {
+  opacity: 1;
+}
+.clock.f9 .circle_m2 {
+  opacity: 1;
+}
+.clock.f9 .circle_m3 {
+  opacity: 0;
+}
+.clock.f9 .circle_m4 {
+  opacity: 0;
+}
+.clock.f9 .circle_s1 {
+  opacity: 1;
+}
+.clock.f9 .circle_s2 {
+  opacity: 1;
+}
+.clock.f9 .circle_s3 {
+  opacity: 1;
+}
+.clock.f9 .circle_s4 {
+  opacity: 0;
+}
+.clock.f9 .circle_s5 {
+  opacity: 0;
+}
+.clock.f9 .circle_s6 {
+  opacity: 0;
+}
+.clock.f9 .circle_s7 {
+  opacity: 0;
+}
+.clock.f9 .circle_s8 {
+  opacity: 0;
+}
+.clock.f10 .circle_m1 {
+  opacity: 1;
+}
+.clock.f10 .circle_m2 {
+  opacity: 1;
+}
+.clock.f10 .circle_m3 {
+  opacity: 0;
+}
+.clock.f10 .circle_m4 {
+  opacity: 0;
+}
+.clock.f10 .circle_s1 {
+  opacity: 1;
+}
+.clock.f10 .circle_s2 {
+  opacity: 1;
+}
+.clock.f10 .circle_s3 {
+  opacity: 1;
+}
+.clock.f10 .circle_s4 {
+  opacity: 1;
+}
+.clock.f10 .circle_s5 {
+  opacity: 0;
+}
+.clock.f10 .circle_s6 {
+  opacity: 0;
+}
+.clock.f10 .circle_s7 {
+  opacity: 0;
+}
+.clock.f10 .circle_s8 {
+  opacity: 0;
+}
+.clock.f11 .circle_m1 {
+  opacity: 1;
+}
+.clock.f11 .circle_m2 {
+  opacity: 1;
+}
+.clock.f11 .circle_m3 {
+  opacity: 0;
+}
+.clock.f11 .circle_m4 {
+  opacity: 0;
+}
+.clock.f11 .circle_s1 {
+  opacity: 1;
+}
+.clock.f11 .circle_s2 {
+  opacity: 1;
+}
+.clock.f11 .circle_s3 {
+  opacity: 1;
+}
+.clock.f11 .circle_s4 {
+  opacity: 1;
+}
+.clock.f11 .circle_s5 {
+  opacity: 0;
+}
+.clock.f11 .circle_s6 {
+  opacity: 0;
+}
+.clock.f11 .circle_s7 {
+  opacity: 0;
+}
+.clock.f11 .circle_s8 {
+  opacity: 0;
+}
+.clock.f12 .circle_m1 {
+  opacity: 1;
+}
+.clock.f12 .circle_m2 {
+  opacity: 1;
+}
+.clock.f12 .circle_m3 {
+  opacity: 1;
+}
+.clock.f12 .circle_m4 {
+  opacity: 0;
+}
+.clock.f12 .circle_s1 {
+  opacity: 1;
+}
+.clock.f12 .circle_s2 {
+  opacity: 1;
+}
+.clock.f12 .circle_s3 {
+  opacity: 1;
+}
+.clock.f12 .circle_s4 {
+  opacity: 1;
+}
+.clock.f12 .circle_s5 {
+  opacity: 0;
+}
+.clock.f12 .circle_s6 {
+  opacity: 0;
+}
+.clock.f12 .circle_s7 {
+  opacity: 0;
+}
+.clock.f12 .circle_s8 {
+  opacity: 0;
+}
+.clock.f13 .circle_m1 {
+  opacity: 1;
+}
+.clock.f13 .circle_m2 {
+  opacity: 1;
+}
+.clock.f13 .circle_m3 {
+  opacity: 1;
+}
+.clock.f13 .circle_m4 {
+  opacity: 0;
+}
+.clock.f13 .circle_s1 {
+  opacity: 1;
+}
+.clock.f13 .circle_s2 {
+  opacity: 1;
+}
+.clock.f13 .circle_s3 {
+  opacity: 1;
+}
+.clock.f13 .circle_s4 {
+  opacity: 1;
+}
+.clock.f13 .circle_s5 {
+  opacity: 0;
+}
+.clock.f13 .circle_s6 {
+  opacity: 0;
+}
+.clock.f13 .circle_s7 {
+  opacity: 0;
+}
+.clock.f13 .circle_s8 {
+  opacity: 0;
+}
+.clock.f13 .circle_l {
+  animation: spinHalf 209ms ease both 41.666ms;
+}
+.clock.f14 .circle_m1 {
+  opacity: 1;
+}
+.clock.f14 .circle_m2 {
+  opacity: 1;
+}
+.clock.f14 .circle_m3 {
+  opacity: 1;
+}
+.clock.f14 .circle_m4 {
+  opacity: 0;
+}
+.clock.f14 .circle_s1 {
+  opacity: 1;
+}
+.clock.f14 .circle_s2 {
+  opacity: 1;
+}
+.clock.f14 .circle_s3 {
+  opacity: 1;
+}
+.clock.f14 .circle_s4 {
+  opacity: 1;
+}
+.clock.f14 .circle_s5 {
+  opacity: 1;
+}
+.clock.f14 .circle_s6 {
+  opacity: 0;
+}
+.clock.f14 .circle_s7 {
+  opacity: 0;
+}
+.clock.f14 .circle_s8 {
+  opacity: 0;
+}
+.clock.f14 .circle_l {
+  animation: spinHalf 209ms ease both 41.666ms;
+}
+.clock.f15 .circle_m1 {
+  opacity: 1;
+}
+.clock.f15 .circle_m2 {
+  opacity: 1;
+}
+.clock.f15 .circle_m3 {
+  opacity: 1;
+}
+.clock.f15 .circle_m4 {
+  opacity: 0;
+}
+.clock.f15 .circle_s1 {
+  opacity: 1;
+}
+.clock.f15 .circle_s2 {
+  opacity: 1;
+}
+.clock.f15 .circle_s3 {
+  opacity: 1;
+}
+.clock.f15 .circle_s4 {
+  opacity: 1;
+}
+.clock.f15 .circle_s5 {
+  opacity: 1;
+}
+.clock.f15 .circle_s6 {
+  opacity: 0;
+}
+.clock.f15 .circle_s7 {
+  opacity: 0;
+}
+.clock.f15 .circle_s8 {
+  opacity: 0;
+}
+.clock.f15 .circle_l {
+  animation: spinHalf 209ms ease both 41.666ms;
+}
+.clock.f16 .circle_m1 {
+  opacity: 1;
+}
+.clock.f16 .circle_m2 {
+  opacity: 1;
+}
+.clock.f16 .circle_m3 {
+  opacity: 1;
+}
+.clock.f16 .circle_m4 {
+  opacity: 0;
+}
+.clock.f16 .circle_s1 {
+  opacity: 1;
+}
+.clock.f16 .circle_s2 {
+  opacity: 1;
+}
+.clock.f16 .circle_s3 {
+  opacity: 1;
+}
+.clock.f16 .circle_s4 {
+  opacity: 1;
+}
+.clock.f16 .circle_s5 {
+  opacity: 1;
+}
+.clock.f16 .circle_s6 {
+  opacity: 1;
+}
+.clock.f16 .circle_s7 {
+  opacity: 0;
+}
+.clock.f16 .circle_s8 {
+  opacity: 0;
+}
+.clock.f16 .circle_l {
+  animation: spinHalf 209ms ease both 41.666ms;
+}
+.clock.f17 .circle_m1 {
+  opacity: 1;
+}
+.clock.f17 .circle_m2 {
+  opacity: 1;
+}
+.clock.f17 .circle_m3 {
+  opacity: 1;
+}
+.clock.f17 .circle_m4 {
+  opacity: 0;
+}
+.clock.f17 .circle_s1 {
+  opacity: 1;
+}
+.clock.f17 .circle_s2 {
+  opacity: 1;
+}
+.clock.f17 .circle_s3 {
+  opacity: 1;
+}
+.clock.f17 .circle_s4 {
+  opacity: 1;
+}
+.clock.f17 .circle_s5 {
+  opacity: 1;
+}
+.clock.f17 .circle_s6 {
+  opacity: 1;
+}
+.clock.f17 .circle_s7 {
+  opacity: 0;
+}
+.clock.f17 .circle_s8 {
+  opacity: 0;
+}
+.clock.f17 .circle_l {
+  animation: spinHalf 209ms ease both 41.666ms;
+}
+.clock.f18 .circle_m1 {
+  opacity: 1;
+}
+.clock.f18 .circle_m2 {
+  opacity: 1;
+}
+.clock.f18 .circle_m3 {
+  opacity: 1;
+}
+.clock.f18 .circle_m4 {
+  opacity: 1;
+}
+.clock.f18 .circle_s1 {
+  opacity: 1;
+}
+.clock.f18 .circle_s2 {
+  opacity: 1;
+}
+.clock.f18 .circle_s3 {
+  opacity: 1;
+}
+.clock.f18 .circle_s4 {
+  opacity: 1;
+}
+.clock.f18 .circle_s5 {
+  opacity: 1;
+}
+.clock.f18 .circle_s6 {
+  opacity: 1;
+}
+.clock.f18 .circle_s7 {
+  opacity: 0;
+}
+.clock.f18 .circle_s8 {
+  opacity: 0;
+}
+.clock.f18 .circle_l {
+  animation: spinHalf 209ms ease both 41.666ms;
+}
+.clock.f19 .circle_m1 {
+  opacity: 1;
+}
+.clock.f19 .circle_m2 {
+  opacity: 1;
+}
+.clock.f19 .circle_m3 {
+  opacity: 1;
+}
+.clock.f19 .circle_m4 {
+  opacity: 1;
+}
+.clock.f19 .circle_s1 {
+  opacity: 1;
+}
+.clock.f19 .circle_s2 {
+  opacity: 1;
+}
+.clock.f19 .circle_s3 {
+  opacity: 1;
+}
+.clock.f19 .circle_s4 {
+  opacity: 1;
+}
+.clock.f19 .circle_s5 {
+  opacity: 1;
+}
+.clock.f19 .circle_s6 {
+  opacity: 1;
+}
+.clock.f19 .circle_s7 {
+  opacity: 0;
+}
+.clock.f19 .circle_s8 {
+  opacity: 0;
+}
+.clock.f19 .circle_l {
+  animation: spinHalf 209ms ease both 41.666ms;
+}
+.clock.f20 .circle_m1 {
+  opacity: 1;
+}
+.clock.f20 .circle_m2 {
+  opacity: 1;
+}
+.clock.f20 .circle_m3 {
+  opacity: 1;
+}
+.clock.f20 .circle_m4 {
+  opacity: 1;
+}
+.clock.f20 .circle_s1 {
+  opacity: 1;
+}
+.clock.f20 .circle_s2 {
+  opacity: 1;
+}
+.clock.f20 .circle_s3 {
+  opacity: 1;
+}
+.clock.f20 .circle_s4 {
+  opacity: 1;
+}
+.clock.f20 .circle_s5 {
+  opacity: 1;
+}
+.clock.f20 .circle_s6 {
+  opacity: 1;
+}
+.clock.f20 .circle_s7 {
+  opacity: 1;
+}
+.clock.f20 .circle_s8 {
+  opacity: 0;
+}
+.clock.f20 .circle_l {
+  animation: spinHalf 209ms ease both 41.666ms;
+}
+.clock.f21 .circle_m1 {
+  opacity: 1;
+}
+.clock.f21 .circle_m2 {
+  opacity: 1;
+}
+.clock.f21 .circle_m3 {
+  opacity: 1;
+}
+.clock.f21 .circle_m4 {
+  opacity: 1;
+}
+.clock.f21 .circle_s1 {
+  opacity: 1;
+}
+.clock.f21 .circle_s2 {
+  opacity: 1;
+}
+.clock.f21 .circle_s3 {
+  opacity: 1;
+}
+.clock.f21 .circle_s4 {
+  opacity: 1;
+}
+.clock.f21 .circle_s5 {
+  opacity: 1;
+}
+.clock.f21 .circle_s6 {
+  opacity: 1;
+}
+.clock.f21 .circle_s7 {
+  opacity: 1;
+}
+.clock.f21 .circle_s8 {
+  opacity: 1;
+}
+.clock.f21 .circle_l {
+  animation: spinHalf 209ms ease both 41.666ms;
+}
+.clock.f22 .circle_m1 {
+  opacity: 1;
+}
+.clock.f22 .circle_m2 {
+  opacity: 1;
+}
+.clock.f22 .circle_m3 {
+  opacity: 1;
+}
+.clock.f22 .circle_m4 {
+  opacity: 1;
+}
+.clock.f22 .circle_s1 {
+  opacity: 1;
+}
+.clock.f22 .circle_s2 {
+  opacity: 1;
+}
+.clock.f22 .circle_s3 {
+  opacity: 1;
+}
+.clock.f22 .circle_s4 {
+  opacity: 1;
+}
+.clock.f22 .circle_s5 {
+  opacity: 1;
+}
+.clock.f22 .circle_s6 {
+  opacity: 1;
+}
+.clock.f22 .circle_s7 {
+  opacity: 1;
+}
+.clock.f22 .circle_s8 {
+  opacity: 1;
+}
+.clock.f22 .circle_l {
+  animation: spinHalf 209ms ease both 41.666ms;
+}
+.clock.f23 .circle_m1 {
+  opacity: 1;
+}
+.clock.f23 .circle_m2 {
+  opacity: 1;
+}
+.clock.f23 .circle_m3 {
+  opacity: 1;
+}
+.clock.f23 .circle_m4 {
+  opacity: 1;
+}
+.clock.f23 .circle_s1 {
+  opacity: 1;
+}
+.clock.f23 .circle_s2 {
+  opacity: 1;
+}
+.clock.f23 .circle_s3 {
+  opacity: 1;
+}
+.clock.f23 .circle_s4 {
+  opacity: 1;
+}
+.clock.f23 .circle_s5 {
+  opacity: 1;
+}
+.clock.f23 .circle_s6 {
+  opacity: 1;
+}
+.clock.f23 .circle_s7 {
+  opacity: 1;
+}
+.clock.f23 .circle_s8 {
+  opacity: 1;
+}
+.clock.f23 .circle_l {
+  animation: spinHalf 209ms ease both 41.666ms;
+}
+.clock.inv {
+  filter: invert(80%);
+}
+/** pagetop **/
+#page-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-size: 80%;
+  z-index: 99;
+}
+#page-top a {
+  display: block;
+  color: #fff;
+  width: 100px;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+}
+#page-top a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}

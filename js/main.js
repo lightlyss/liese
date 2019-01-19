@@ -1,4 +1,11 @@
+// Originally 2019-1-21 17:00:00:00
+var target = new Date(2019, 1 - 1, 21, 17, 0, 0, 0);
 var isStop = false;
+var currentClock = {
+  h: '00',
+  m: '00',
+  s: '00',
+};
 
 $(function() {
   $(".gear").addClass("spin");
@@ -7,15 +14,13 @@ $(function() {
   var $elem = $("img");
   var sp = "img/sp/";
   var pc = "img/pc/";
-
   var replaceWidth = 768;
+  var resizeTimer;
 
   function imageSwitch() {
     var windowWidth = parseInt($(window).width());
-
     $elem.each(function() {
       var $this = $(this);
-
       if (windowWidth >= replaceWidth) {
         $this.attr("src", $this.attr("data-src"));
       } else {
@@ -26,7 +31,7 @@ $(function() {
     });
   }
   imageSwitch();
-  var resizeTimer;
+
   $(window).on("resize", function() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function() {
@@ -84,8 +89,6 @@ $(function() {
 
   function step() {
     var now = new Date();
-    // TODO Originally 2019-1-21 17:00:00:00
-    var target = new Date(2019, 1 - 1, 21, 17, 0, 0, 0);
     var diff = Math.max(0, target.getTime() - now.getTime());
     var h = Math.floor(diff / (1000 * 60 * 60));
     var m = Math.floor(diff / (1000 * 60)) - h * 60;
@@ -99,7 +102,6 @@ $(function() {
   }
   window.requestAnimationFrame(step);
 
-  // loading
   var time = new Date().getTime();
   $(window).on('load', function(){
     var now = new Date().getTime();
@@ -118,18 +120,10 @@ $(function() {
       $('section').fadeIn();
     }
   });
-
 });
-
-var currentClock = {
-  h: '00',
-  m: '00',
-  s: '00',
-};
 
 function setClock(h, m, s, ms) {
   h = Math.min(99, h);
-  // console.log(h,m,s,ms);
   $("#h").attr("class", "clock");
   $("#m").attr("class", "clock");
   $("#s").attr("class", "clock");
@@ -198,7 +192,6 @@ function setClock(h, m, s, ms) {
 }
 
 function shatterCompleteHandler() {
-  // console.log('complete');
   tl = new TimelineMax({onComplete:shatterCompleteHandler});
   tweens = [];
   while(scene.children.length > 0){
@@ -208,16 +201,8 @@ function shatterCompleteHandler() {
 
 var Boom = {};
 var scene, camera, renderer;
-var tl = new TimelineMax({onComplete:shatterCompleteHandler}),
-  tweens = [];
+var tl = new TimelineMax({onComplete:shatterCompleteHandler}), tweens = [];
 Boom.init = function() {
-  /*
-    |
-    | Create scene, renderer and camera used by
-    | Three.js. Uses CSS3D renderer
-    |
-    */
-
   scene = new THREE.Scene();
 
   camera = new THREE.PerspectiveCamera(25, window.innerWidth / window.innerHeight, 1, 10000);
@@ -234,37 +219,16 @@ Boom.init = function() {
   window.addEventListener("resize", function() {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-
     renderer.setSize(document.getElementById('canvas').offsetWidth, document.getElementById('canvas').offsetHeight);
-
     renderer.render(scene, camera);
   });
 };
 
-/*
-|
-| Random number functions
-|
-*/
 function getRandomArbitrary(min, max) {
-  /*
-    |
-    | Returns a random number between two other numbers
-    |
-    */
-
   return Math.random() * (max - min) + min;
 }
 
 function makeRandomNegative(number) {
-  /*
-    |
-    | Will randomly make a number positive or
-    | nagative. This is nessecary due to
-    | the three.js coordinate system
-    |
-    */
-
   var conditional = Math.random();
   if (conditional > 0.5) {
     return number * -1;
@@ -273,24 +237,10 @@ function makeRandomNegative(number) {
   }
 }
 
-/*
-|
-| Canvas Fragment Class
-| Extends THREE.CSS3DObject
-|
-| Used to render the triangulated canvas paices to
-| be animated into an explosion.
-|
-*/
+// Shattered glass
 (function() {
   var Fragment = function(options) {
-    /*
-        |
-        | Fragment Constructor
-        |
-        */
     var opts = options || {};
-
     this.side = opts.count % 2;
     this.index = opts.count;
     this.gridIndex = opts.gridIndex;
@@ -299,92 +249,43 @@ function makeRandomNegative(number) {
     this.tileHeight = Math.round(this.sourceCanvas.height / opts.columns);
     this.cRow = Math.floor(this.gridIndex / opts.rows);
     this.cCol = Math.floor(this.gridIndex % opts.rows);
-
     this.x = this.cCol * this.tileWidth;
     this.y = -(this.cRow * this.tileHeight);
     this.initCanvas();
-    // console.log(this.element)
-    // console.log(this)
     THREE.CSS3DObject.call(this, this.element);
     this.setStartPosition();
     this.setTween();
   };
-  /*
-    |
-    | Set up inhertitance chain and set p as
-    | a shorthand for the class prototype
-    | class methods are attached to p
-    |
-    */
+
   var p = (Fragment.prototype = Object.create(THREE.CSS3DObject.prototype));
 
   p.setTween = function() {
-    /*
-        |
-        | Set up Tween properties using random number
-        | generator functions. Tweening handled
-        | by TweenMax / TimelineMax
-        |
-        */
-    // console.log(this);
     tweens.push(
-      // TweenMax.to(this.position, 1, {
-      //   x: makeRandomNegative(this.position.x * getRandomArbitrary(1, 2)),
-      //   y: makeRandomNegative(this.position.y * getRandomArbitrary(1, 2)),
-      //   Z: makeRandomNegative(this.position.z * getRandomArbitrary(1, 2)),
-      //   ease: Power1.easeOut,
-      // })
-      // TweenMax.to(this.position, 5, {
-      //   x: makeRandomNegative(this.position.x * getRandomArbitrary(1, 1.2)),
-      //   y: makeRandomNegative(this.position.y * getRandomArbitrary(1, 1.2)),
-      //   Z: makeRandomNegative(this.position.z * getRandomArbitrary(1, 1.2)),
-      //   ease: Power1.easeOut,
-      // })
       TweenMax.to(this.position, 3, {
         x: this.position.x + getRandomArbitrary(-2500, 2500),
         y: this.position.y + getRandomArbitrary(-2500, 2500),
         Z: this.position.z + getRandomArbitrary(-1200, 1200),
-        // ease: Power1.easeOut,
       })
     );
-
     tweens.push(
-      // TweenMax.to(this.rotation, 1, {
-      //   x: this.position.x * getRandomArbitrary(0.1, 0.2),
-      //   y: this.position.y * getRandomArbitrary(0.1, 0.3),
-      //   Z: this.position.z * getRandomArbitrary(0.1, 0.2),
-      //   ease: Power0.easeOut,
-      // })
       TweenMax.to(this.rotation, 3, {
         x: this.position.x * 0.02,
         y: this.position.y * 0.02,
         Z: this.position.z * 0.02,
         ease: Power0.easeOut,
       })
-
     );
-
     tweens.push(
       TweenMax.to(this.element, 1, {
         opacity: 0,
         delay: 1.5,
-        // ease: Power0.easeOut,
       })
     );
-
     tl.insertMultiple(tweens);
     tl.pause();
   };
 
   p.initCanvas = function() {
-    /*
-        |
-        | Set up individual canvas tag to be rendered
-        | to the DOM. Canvas will represent
-        | one fragment of the image
-        |
-        */
-
     var c = document.createElement("canvas");
     c.setAttribute("data-index", this.index);
     c.setAttribute("data-side", this.side);
@@ -397,13 +298,6 @@ function makeRandomNegative(number) {
   };
 
   p.drawToCanvas = function(canvas) {
-    /*
-        |
-        | Handles drawing the image element for
-        | this particulat fragment will
-        | draw one triangular peice
-        |
-        */
     var ctx = canvas.getContext("2d");
     ctx.fillStyle = "transparent";
     ctx.beginPath();
@@ -420,31 +314,15 @@ function makeRandomNegative(number) {
   };
 
   p.setStartPosition = function() {
-    /*
-        |
-        | Sets Three.js position based on where
-        | the element belongs in the grid
-        |
-        */
-    // this.position.x = this.x + 120;
-    // this.position.y = this.y + 330;
-    // this.position.z = 10;
     this.position.x = this.x;
     this.position.y = this.y;
     this.position.z = 0;
   };
 
-  // return Fragment class
   window.Fragment = Fragment;
 })();
 
-/*
-|
-| Triangulation Logic
-|
-*/
-
-// Triangulatin settings
+// Triangulation settings
 var ts = {
   rows: 5,
   columns: 5
@@ -454,7 +332,6 @@ var sourceCanvas;
 
 function triangulate(total) {
   var gridIndex = 0;
-
   for (var i = 0; i < total; i++) {
     var frag = new Fragment({
       count: i,
@@ -463,11 +340,9 @@ function triangulate(total) {
       columns: ts.columns,
       gridIndex: gridIndex
     });
-
     if (frag.side == 1) {
       gridIndex++;
     }
-
     scene.add(frag);
   }
 }
@@ -475,25 +350,15 @@ function triangulate(total) {
 function setCanvas(canvas) {
   sourceCanvas = canvas;
   var canvas3d = new THREE.CSS3DObject(canvas);
-  // canvas3d.position.set(15, -37, 0);
-  // scene.add(canvas3d);
-
-  // tl.add(
-  //   TweenMax.to(canvas3d.element, 0.5, {
-  //     opacity: 0
-  //   })
-  // );
-
   triangulate(totalSections);
 }
 
 TweenMax.ticker.addEventListener("tick", function(){
-  // Render our three.js scene and camera
-  renderer.render( scene, camera );
+  if (!renderer) return;
+  renderer.render(scene, camera);
 });
 
 $(function () {
-  // totop
   var topBtn = $("#page-top");
   topBtn.hide();
   $(window).scroll(function () {
@@ -505,11 +370,15 @@ $(function () {
   });
   topBtn.click(function () {
     $("body,html").animate(
-      {
-        scrollTop: 0
-      },
+      {scrollTop: 0},
       500
     );
     return false;
+  });
+  $("#kv_logo").click(function (e) {
+    e.preventDefault();
+  });
+  $("#footer_logo").click(function (e) {
+    e.preventDefault();
   });
 });

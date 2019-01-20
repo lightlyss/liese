@@ -1,8 +1,9 @@
 # Liese
-Liese is one of Homulilly's familiars, responsible for announcing funerals and executions.
+![icon](img/liese.png)
+> The Nutcracker Witch's servant. Its role is to bear bad news.
+> These stuffed birds announce the beginning of the witch's funeral procession.
 
-## Usage
-This is pure frontend and contains only static content.
+## Description
 Magia Record posted this countdown timer to announce an upcoming event.
-It's been cleaned up here to run standalone. There's a `target` date in
-`main.js` that can be changed to update the deadline.
+This standalone version can be configured by modifying the `target` time in
+`main.js`. View the timer by opening `index.html` in any modern browser.

@@ -1,5 +1,7 @@
 // Originally 2019-1-21 17:00:00:00
-var target = new Date(2019, 1 - 1, 21, 17, 0, 0, 0);
+var target = new Date();
+target.setDate(28);
+target.setHours(23, 59, 59);
 var isStop = false;
 var currentClock = {
   h: '00',

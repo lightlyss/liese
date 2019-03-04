@@ -4,7 +4,7 @@ target.setDate(28);
 target.setHours(23, 59, 59);
 var isStop = false;
 var currentClock = {
-  h: '00',
+  h: '000',
   m: '00',
   s: '00',
 };
@@ -125,7 +125,7 @@ $(function() {
 });
 
 function setClock(h, m, s, ms) {
-  h = Math.min(99, h);
+  h = Math.min(999, h);
   $("#h").attr("class", "clock");
   $("#m").attr("class", "clock");
   $("#s").attr("class", "clock");
@@ -147,7 +147,11 @@ function setClock(h, m, s, ms) {
       $('#h').removeClass('inv');
     }, 250);
     currentClock.h = ''+h;
-    if (h >= 10) {
+    if (h >= 100) {
+      $("#h .num1").html('<img src="img/' + d + '/' + Math.floor(h / 100) + '.png"><img src="img/' + d + '/' + Math.floor(h % 100 / 10) + '.png"><img src="img/' + d + '/' + (h % 100 % 10) + '.png">');
+      $("#h .num2").html('<img src="img/' + d + '/' + Math.floor(h / 100) + '.png"><img src="img/' + d + '/' + Math.floor(h % 100 / 10) + '.png"><img src="img/' + d + '/' + (h % 100 % 10) + '.png">');
+      $("#h .num").html('<img src="img/' + d + '/' + Math.floor(h / 100) + 'b.png"><img src="img/' + d + '/' + Math.floor(h % 100 / 10) + 'b.png"><img src="img/' + d + '/' + (h % 100 % 10) + 'b.png">');
+    } else if (h >= 10) {
       $("#h .num1").html('<img src="img/' + d + '/' + Math.floor(h / 10) + '.png"><img src="img/' + d + '/' + (h % 10) + '.png">');
       $("#h .num2").html('<img src="img/' + d + '/' + Math.floor(h / 10) + '.png"><img src="img/' + d + '/' + (h % 10) + '.png">');
       $("#h .num").html('<img src="img/' + d + '/' + Math.floor(h / 10) + 'b.png"><img src="img/' + d + '/' + (h % 10) + 'b.png">');
